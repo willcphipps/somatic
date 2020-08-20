@@ -1,0 +1,444 @@
+@import 'config';
+@import 'menuBtn';
+@import 'header';
+
+
+// targeting main content
+body{
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main {
+  // position: fixed;
+  top: 0;
+  margin:0px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 60px 0px 0px 0px;
+  background: $primary-color;
+  color: $text-color;
+  z-index: -1;
+}
+
+// ------------------------------------- home page -------------------------------------------
+.home {
+   background: $primary-color;
+  display:  flex;
+  flex-direction: column;
+  padding-top: 12rem;
+  // area of our carousel & featured products
+    .sales-container{
+      height: 50vh;
+      // // margin-top: 4rem;
+      // padding: 2rem;
+      // display: flex;
+      // justify-content: space-around;
+      // .carousel-inner img {
+      //   width: 100%;
+      //   height: 100%;
+      // }
+      // .product-description{
+      //   font-size: 20px;
+      //   display: flex;
+      //   flex-direction: column;
+      //   min-width: 20rem;
+        
+      //   // height: 60vh;
+
+      //   // padding: 5px;
+      //   .checked {
+      //     color: orange;
+      //   }
+          
+      // }
+      // // here is where the image carousel slides live
+      //   #carousel{
+      //     width: 75vw;
+      //       .carousel-caption > *{
+      //         color: $text-color;
+      //       }
+      //     }
+}
+    // branding bg image with link to about page
+    .marketing-container{
+      display:flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      margin-top: 5rem;
+      min-height: 75vh;
+      padding: 4rem 5rem;
+      background-image: url('/images/beauty.jpg');
+      background-position: center;
+      background-size: cover;
+      .content{
+        color: $primary-color;
+        width: 450px;
+        display:flex;
+        flex-direction:column;
+      }
+      .content > * {
+        margin: 2rem;
+      }
+    }
+    // here is where our featured news article lives.
+   .news-article{
+    margin: 10rem 2rem;
+    padding: 4rem 5rem;
+     display: flex;
+     justify-content: space-between;
+     .news-image{
+       height: 30rem;
+       width: 40rem;
+       background-image: url('/images/lab.jpg');
+       background-position: center;
+       background-size: cover;
+   }
+    // snipet from article and link to tulsa world website
+     .news-text{
+       margin: 2rem;
+       width: 40vw;
+       display: flex;
+       flex-direction: column;
+        h2{
+          text-align: center;
+        }
+        p , h2{
+          padding: 1rem;
+          text-indent: 2rem;
+        }
+     }
+}
+
+    // branding bg image with link to our content page
+    .branding-container{
+      display:flex;
+      align-items: center;
+      // margin-top: 5rem;
+      min-height: 75vh;
+      padding: 4rem 5rem;
+      background-image: url('/images/oil.jpg');
+      background-position: center;
+    
+      background-size: cover;
+      .content{
+        color: $primary-color;
+        width: 450px;
+        display:flex;
+        flex-direction:column;
+      }
+      .content > * {
+        margin: 2rem;
+      }
+    }
+    // product statement and text information area
+    .information{
+      // padding: 4rem;
+      display: inline;
+      text-align: center;
+      padding: 10rem 15rem 5rem;
+        span{
+          color: $secondary-color;
+        }
+    }
+}
+
+// -------------------------------------------- about page ------------------------------------
+
+.about-wrap{
+  padding-top: 12rem;
+  .faq-wrap{
+    margin-top: 10rem;
+    // display: grid;
+    //     grid-gap: 1em;
+    //     // grid-template-columns: repeat(4, 2fr);
+
+  }
+}
+// nature & sustainable aggriculture section
+.about-nature{
+  display: flex;
+  height: 75vh;
+  width: 100%;
+  h4{
+    display:none;
+  }
+    .nature-image{
+      height: 100%;
+      width: 100%;
+      background-image: url('/images/nature.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+    .nature-info{
+      width: 60vw;
+      padding: 4rem;
+      // background-color: goldenrod;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  // organic // healthy // hand-crafted 'certification' badges
+  .about-logos{
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .logo-info{
+      h4{
+        display: none;
+      }
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    .logo-badges{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+        .logo-badge{ 
+          margin: 3rem;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+        }
+        .logo-badge > * {
+          padding: 5px;
+        }
+    }
+  }
+
+  // health and wellness section
+  .about-body{
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+  height: 75vh;
+  width: 100%;
+    .body-image{
+      height: 100%;
+      width: 100%;
+      background-image: url('/images/hands.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+    .body-info{
+      width: 60vw;
+      padding: 4rem;
+      // background-color: goldenrod;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  // faq section with accordion
+.about-faq{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  padding: 10rem;
+  .faq-header{
+    border-top: solid 1px #eee;
+    padding: 1rem;
+      .rotate-icon{
+        float:right;
+      }
+  }
+
+  .faq-header:hover {
+    box-shadow: 0 0 5px rgb(235, 235, 235), 0 0 10px rgb(235, 235, 235);
+    cursor: pointer;
+  }
+
+  .faq-panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+}
+// ----------------------------- end about section -----------------------------------------------
+
+
+// -------------------------------- shopping cart section ----------------------------------------
+
+
+
+
+// ---------------------------------- end contact -------------------------------------------------
+
+// --------------------------------- shop section -------------------------------------------------
+.shop-wrap{
+    min-height: 125vh;
+    margin-top: 4rem;
+    display: flex;
+    padding: 4rem;
+    flex-direction: column;
+      .shop-nav{
+        display: flex;
+        justify-content: center;
+    .brand-cards{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      .brand-card{
+        width: 25rem;
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+        text-align: center;
+        @include easeOut;
+        .card-img-top{
+            height: 275px;
+          }
+          .card-body{
+            height: 250px;
+            p , h4 , a {
+              margin-top: 15px;
+            }
+          }
+      }
+      .brand-card:hover{
+        cursor: pointer;
+        @include easeOut;
+        box-shadow: 0 0 5px rgb(219, 218, 218), 0 0 10px rgb(219, 218, 218), 0 0 20px rgb(219, 218, 218);
+      }
+    }
+      }
+      .shop-category{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .product-display {
+          margin: 2rem 0rem;
+          width: 300px;
+          height: 400px;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          .product-img{
+            width: 100%;
+            height: 100%;
+            background-image: url('/images/dropper1.jpeg');
+            background-position: center;
+            background-size: cover;
+          }
+          .product-title{
+            // margin-top:2rem;
+            // font-weight: lighter;
+            text-transform: uppercase;
+            padding: 5px;
+          }
+          .product-price{
+            // font-weight: lighter;
+            font-size: 18px;
+            padding: 5px;
+          }
+          .product-button{
+            width: 250px;
+            margin-left: 25px;
+          }
+        }
+      }
+      .product-cat-wrap{
+        margin-top:10px;
+        padding: 3rem 2rem;
+        min-height:150px;
+        // background: #444;
+        .product-cat-blurb{
+          width: 600px;
+        }
+        // background: #444;
+      }
+    #product-modal{
+            position: fixed;
+            width: 500px;
+            height: 400px;
+            left: calc(50vw - 250px);
+            top: calc(50vh - 200px);
+            background: $primary-color;
+            padding: 2rem;
+            -webkit-box-shadow: -5px 7px 300px 88px rgba(0,0,0,0.34);
+            -moz-box-shadow: -5px 7px 300px 88px rgba(0,0,0,0.34);
+            box-shadow: -5px 7px 300px 88px rgba(0,0,0,0.34);
+            display:none;
+            text-align: center;
+            .modal-product-desc{
+              margin: 3rem 2rem;
+            }
+            img{
+              height: 150px;
+              width: 150px;
+            }
+            .modal-text-wrap{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              .modal-text{
+                display: flex;
+                flex-direction: column;
+              }
+            }
+              &.show{
+                display: block;
+              }
+              .product-btn-display{
+                // margin-top: 140px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                button{
+                  width: 125px;
+                }
+              }
+          }
+}
+// ---------------------------- cart section -----------------------------------
+.cart-wrap{
+  min-height: 75vh;
+  padding: 2rem;
+  .cart-table{
+    width: 100%;
+    display:flex;
+    padding-top: 3rem;
+    flex-direction: column;
+    // justify-content: center;
+  }
+  #checkout-modal{
+      position: fixed;
+      width: 500px;
+      height: 400px;
+      left: calc(50vw - 250px);
+      top: calc(50vh - 200px);
+      background: $primary-color;
+      padding: 2rem;
+      -webkit-box-shadow: -5px 7px 300px 88px rgba(0,0,0,0.34);
+      -moz-box-shadow: -5px 7px 300px 88px rgba(0,0,0,0.34);
+      box-shadow: -5px 7px 300px 88px rgba(0,0,0,0.34);
+      display:none;
+      text-align: center;
+        &.show{
+          display: block;
+        }
+  }
+}
+
+.text{
+  background: rgba(darken($primary-color, 10), .235);
+  padding: 6px;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.footer{
+  color: $primary-color;
+  padding: 1rem 3rem;
+  width: 100vw;
+  background-color: $header-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@import "mobile"

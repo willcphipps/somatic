@@ -1,0 +1,272 @@
+// -------------------------------- large desktops ----------------------------------
+@include mediaXl{
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+// --------------------------- dektops & (large) laptops -----------------------------
+@include mediaLg{
+//  .shop-category{
+//     grid-template-columns: repeat(2, 1fr);
+//  }
+
+}
+
+
+// --------------------------- tablets & (small) laptops -----------------------------
+@include mediaMd{
+main{
+  overflow:hidden;
+}
+ // change our menu drop down direction 
+ .menu{
+  
+   opacity: 1;
+   background: #000;
+   width: 250px;
+   transition: all .25s ease;
+  //  transition: all .5s ease-in-out;
+   height: 100%;
+  //  @include easeOut;
+    .menu-nav{
+        margin:3rem 0 0 2rem;
+        display:flex;
+        flex-direction: column;
+    }
+    .nav-link{
+        float: left;
+        color:$primary-color;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        transition: all 0s ease-in-out;
+        // @include easeOut;
+    }
+ }
+ // ------------------------- adjusting home page --------------------------------
+  .sales-container{
+        // padding:5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    .product-description{
+      margin-bottom: 2rem;
+    }
+    #carousel{
+      width: 75vw;
+      // position: fixed;
+      left: 7vw;
+    }
+  }
+  .marketing-container{
+    margin-top: 10px;
+  }
+  .home{
+    .news-article{
+      margin: 5rem 1rem;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+        .news-text{
+          width:calc(100vw - 100px)
+        }
+        .news-image{
+          display: none;
+          // width:calc(100vw - 35px)
+        }
+    }
+    .information{
+      padding: 5rem 15rem 2rem;
+    }
+  }
+  // -------------------------------- about page ----------------------------------|
+  .about-wrap{
+    padding-top: 2rem;
+    // section about nature // healing // salve
+  }
+.about-nature{
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 100%;
+  text-align: center;
+    h4{
+      display: block;
+      padding: 2rem;
+    }
+    .nature-info{
+      display: none;
+    }
+  }
+    // organic // healthy // hand-crafted 
+  .about-logos{
+    margin: 5rem 0rem 2rem;
+    .logo-info{
+      p, h3{
+        display: none;
+      }
+      h4 {
+        display: block;
+      }
+    }
+    
+    .logo-badges{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+        .logo-badge{ 
+          margin: 5rem 2rem 2rem;
+          display: block;
+          text-align: center;
+        }
+        .logo-badge > img {
+          height: 150px;
+          width: 150px;
+        }
+    }
+  }
+  // about body // salve // handmade 
+  .about-body{
+    margin-top: 4rem;
+    display: block;
+    // text-align: center;
+    .body-info{
+      width: 100%;
+    }
+    .body-image{
+      height: 75%;
+    }
+  }
+  // ----------------------------- shop page --------------------------------------|
+  .shop-wrap{
+    width:100%;
+      margin-top: 0rem;
+      .shop-nav{
+        .brand-cards{
+      // margin-bottom: 2rem;
+        .brand-card{
+          // width: 2rem;
+          width: auto;
+          // height: 200px;
+          height: 25rem;
+          display: flex;
+          flex-direction: column;
+          margin: 2rem;
+          text-align: center;
+          @include easeOut;
+          .card-img-top{
+              height: 200px;
+            }
+            p{
+              display: none;
+            }
+        }
+    }
+      }
+      .shop-category{
+        .product-display{
+          margin: 2rem 0rem;
+          width: 200px;
+          .product-button{
+            width: 150px;
+            margin-left: 25px;
+          }
+        }
+      }
+      .product-cat-wrap{
+         margin-top: 5rem;
+        padding: 3rem 2rem;
+        padding: 0rem;
+        min-height:150px;
+        .product-cat-blurb{
+          width: 500px;
+          //  margin-top: 2rem;
+        }
+      }
+    }
+}
+
+// -------------------------------- smartphones -----------------------------------|
+@include mediaSm{
+  // home page --------------------------|
+  .home{
+    .marketing-container{
+      padding: 5rem 2rem;
+    }
+    .news-article{
+      margin: 5rem 0rem;
+      padding: 0rem;
+      .news-text{
+        margin: 5px;
+        width: 95vw;
+        h2{
+          display: none;
+        }
+      // background: blue;
+      }
+    }
+    .branding-container{
+      padding: 5rem 2rem;
+    }
+    .information{
+      padding: 2rem;
+    }
+  }
+  .footer{
+    flex-direction: column;
+    div{
+      text-align: center;
+      padding: 1rem;
+    }
+  }
+  // about page --------------------------|
+  .about-logos{
+    .logo-badges{
+      .logo-badge > img{
+        height: 45px;
+        width: auto;
+      }
+    }
+  }
+   .about-body{
+     margin-top: 2rem;
+    .body-info{
+      // width: 60vw;
+      padding: 2rem;
+    }
+   }
+   .about-faq{
+     padding: 2rem;
+      .faq-panel {
+      padding: 0 18px;
+    }
+   }
+   // shop page --------------------|
+
+   .shop-wrap{
+     .shop-nav{
+       .brand-cards{
+         display: flex;
+        flex-direction: column;
+      }
+    }
+    margin-top: 8rem;
+    padding: 2rem;
+    .product-cat-wrap{
+      .product-cat-blurb{
+        width: 300px;
+      }
+    }
+    #product-modal{
+      width: 320px;
+       left: calc(50vw - 160px);
+      .modal-text-wrap{
+        margin-top: 20px;
+        img{
+          display:none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+$primary-color: #ffff;
+$secondary-color: rgb(175, 143, 15);
+$text-color: rgb(3, 3, 3);
+$header-color:  rgb(0, 0, 0);
+$primary-font: Gotham, Arial,sans-serif;
+
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+
+// media quwery mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px){
+    @content;
+  }
+}
+@mixin mediaMd {
+  @media screen and (max-width: 768px){
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media screen and (max-width: 1170px){
+    @content;
+  }
+}
+@mixin mediaXl {
+  @media screen and (min-width: 1171px){
+    @content;
+  }
+}

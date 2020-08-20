@@ -1,0 +1,27 @@
+
+// NavBar Style
+.topNav{
+  position: fixed;
+  top:0;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  height: 75px;
+  left: 0;
+  z-index: 1;
+  background: $header-color;
+}
+.header-logo{
+  padding: 10px;
+  font-size: x-large;
+  font-weight: lighter;
+  text-align: center;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+    &:after {
+      padding-top: 75px;
+    }
+}
